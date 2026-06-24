@@ -16,9 +16,12 @@
 # next.js
 /.next/
 /out/
+.swc/
 
-# production
+# production / build output
 /build
+/dist
+.open-next
 
 # misc
 .DS_Store
@@ -29,9 +32,15 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+*.log
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files & secrets (never commit credentials)
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
 
 # vercel
 .vercel
@@ -40,10 +49,24 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# OpenNext
-.open-next
-
-# wrangler files
+# cloudflare / wrangler
 .wrangler
-.dev.vars*
-!.dev.vars.example
+.mf
+cloudflare-env.d.ts
+
+# caches
+.cache
+.turbo
+.eslintcache
+.prettiercache
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE / editor (local only)
+.idea/
+*.sublime-project
+*.sublime-workspace
+.cursor/
