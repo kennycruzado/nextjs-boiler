@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 
 import { getSessionFromRequest } from "@/lib/auth/session"
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const session = await getSessionFromRequest(request)
 
   if (request.nextUrl.pathname.startsWith("/app") && !session) {
