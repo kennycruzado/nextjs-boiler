@@ -34,5 +34,15 @@
 		// Enable image optimization
 		// see https://opennext.js.org/cloudflare/howtos/image
 		"binding": "IMAGES"
-	}
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "nextjs-boiler",
+			// Replace with your D1 database id before deploying:
+			// npx wrangler d1 create nextjs-boiler
+			"database_id": "00000000-0000-0000-0000-000000000000",
+			"migrations_dir": "drizzle"
+		}
+	]
 }
