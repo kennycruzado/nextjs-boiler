@@ -52,7 +52,6 @@ next-env.d.ts
 # cloudflare / wrangler
 .wrangler
 .mf
-cloudflare-env.d.ts
 
 # caches
 .cache
